@@ -32,7 +32,7 @@ export default function Home() {
             <MultiSelect />
           </div>
           <p className="text-sm text-gray-600">
-            Try selecting multiple fruits or creating a new fruit option!
+            Try selecting multiple options or creating a new option!
           </p>
         </section>
 
