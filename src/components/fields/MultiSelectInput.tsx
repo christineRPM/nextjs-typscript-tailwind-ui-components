@@ -1,9 +1,7 @@
-// components/MultiSelectInput.tsx
-
 import React, { useState } from 'react';
 import CreatableSelect from 'react-select/creatable';
 import makeAnimated from 'react-select/animated';
-import { ActionMeta, MultiValue } from 'react-select';
+import { ActionMeta, MultiValue, StylesConfig } from 'react-select';
 import { fruitOptions, colorOptions, animalOptions } from '@/data/selectOptions';
 
 type OptionType = {
@@ -13,8 +11,8 @@ type OptionType = {
 
 const animatedComponents = makeAnimated();
 
-const customStyles = {
-  control: (base: any) => ({
+const customStyles: StylesConfig<OptionType, true> = {
+  control: (base) => ({
     ...base,
     height: "auto",
     minHeight: "3rem",
@@ -29,17 +27,17 @@ const customStyles = {
         borderColor: "rgb(195 202 209)",
     },
   }),
-  valueContainer: (base: any) => ({
+  valueContainer: (base) => ({
     ...base,
     padding: '6px 6px'
   }),
-  input: (base: any) => ({
+  input: (base) => ({
     ...base,
     margin: 0,
     padding: 0,
     whiteSpace: 'pre-wrap',
   }),
-  option: (base: any) => ({
+  option: (base) => ({
     ...base,
     backgroundColor: `white`,
     ':hover': {
@@ -50,9 +48,9 @@ const customStyles = {
         backgroundColor: `#3999b9`,
     },
     height: '100%',
-    whiteSpace: 'pre-wrap', // Allows option values to overflow to a new line
+    whiteSpace: 'pre-wrap',
   }),
-  multiValue: (base: any) => ({
+  multiValue: (base) => ({
     ...base,
     borderRadius: "5px",
     boxShadow: "0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
@@ -63,23 +61,24 @@ const customStyles = {
         backgroundImage: 'linear-gradient(to right, #3999b9, #3edfcf)',
     },
   }),
-  multiValueLabel: (base: any) => ({
+  multiValueLabel: (base) => ({
     ...base,
     color: 'black',
     textWrap: 'pretty', 
   }),
-  multiValueRemove: (base: any) => ({
+  multiValueRemove: (base) => ({
     ...base,
     color: 'black',
     ':hover': {
       color: '#697b8c',
     },
   }),
-  menu: (base: any) => ({
+  menu: (base) => ({
     ...base,
-    whiteSpace: 'pre-wrap', // Allows option values to overflow to a new line
+    whiteSpace: 'pre-wrap',
   }),
 };
+
 type MultiSelectInputProps = {
     title?: string;
     optionType: 'fruit' | 'color' | 'animal';
@@ -115,7 +114,6 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({ title, optionType, 
     ) => {
       console.log(actionMeta);
       console.log(newValue);
-      // Keep menu open on select
       setIsMenuOpen(true);
       onChange(newValue);
     };
@@ -131,7 +129,7 @@ const MultiSelectInput: React.FC<MultiSelectInputProps> = ({ title, optionType, 
     return (
       <div className={extra}>
           <h3 className="mb-2">{title}</h3>
-          <CreatableSelect
+          <CreatableSelect<OptionType, true>
             aria-labelledby="aria-label"
             isMulti
             components={animatedComponents}
