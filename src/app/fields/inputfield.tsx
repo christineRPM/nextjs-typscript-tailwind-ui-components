@@ -1,16 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { NextPage } from "next";
 import InputField from "@/components/fields/InputField";
 
 const InputFieldDemo: NextPage = () => {
-    const [inputValue, setInputValue] = useState("");
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setInputValue(e.target.value);
-    };
-
     return (
         <div className="border-t pt-5 mb-4">
             <InputField
