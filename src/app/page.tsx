@@ -5,18 +5,7 @@ import InputFieldDemo from "./fields/inputfield";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative">
-      <header>
-        <Image
-          className="dark:invert mx-auto"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-      </header>
-      
+    <div className="grid grid-rows-[auto_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative"> 
       <main className="flex flex-col gap-2 items-center">
         <h1 className="text-3xl font-bold">Components</h1>
         <h1 className="text-xl font-bold mb-4">NextJS - TypeScript - Tailwind</h1>
