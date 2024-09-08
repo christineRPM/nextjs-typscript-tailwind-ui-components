@@ -19,7 +19,7 @@ const MultiSelect: NextPage = () => {
 
     return (
         <MultiSelectInput
-            title="Select Your Favorite Fruits"
+            title="Multi Select Example"
             optionType="fruit"
             selectedValues={selectedFruits}
             onChange={handleFruitChange}
