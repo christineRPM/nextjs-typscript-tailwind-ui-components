@@ -11,7 +11,7 @@
 
 ## View The Components
 
-https://nextjs-typscript-tailwind-ui-components-l4lc.vercel.app/
+https://nextjs-typscript-tailwind-ui-components.vercel.app
 
 ## Installation
 
