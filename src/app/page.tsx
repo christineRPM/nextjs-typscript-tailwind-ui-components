@@ -8,7 +8,19 @@ export default function Home() {
     <div className="grid grid-rows-[auto_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative"> 
       <main className="flex flex-col gap-2 items-center">
         <h1 className="text-3xl font-bold">Components</h1>
-        <h1 className="text-xl font-bold mb-4">NextJS - TypeScript - Tailwind</h1>
+        <h1 className="text-xl font-bold mb-4 flex items-center space-x-3">
+          <Link href="https://nextjs.org/docs" className="text-blue-500 hover:underline">
+            NextJS
+          </Link>
+          <span className="text-gray-400 text-sm">•</span>
+          <Link href="https://www.typescriptlang.org/" className="text-blue-500 hover:underline">
+            TypeScript
+          </Link>
+          <span className="text-gray-400 text-sm">•</span>
+          <Link href="https://tailwindcss.com/docs/installation" className="text-blue-500 hover:underline">
+            Tailwind
+          </Link>
+        </h1>
         
         <section className="w-2/3 flex flex-col border rounded-xl p-5 shadow shadow-xl mb-8">
           <h2 className="text-2xl font-semibold mb-4">MultiSelectInput Component</h2>
