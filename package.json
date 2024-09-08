@@ -17,7 +17,7 @@
   "description": "A collection of Next.js, TypeScript, and Tailwind CSS UI components.",
   "authorBlog": "https://medium.com/@christineRPM",
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3031",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

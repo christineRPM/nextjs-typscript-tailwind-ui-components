@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import MultiSelect from "./fields/multiselect";
-import InputFieldDemo from "./fields/inputfield";
-import ToggleDemo from "./toggle/toggle";
+import ToggleDemo from "./toggle/page";
+import MultiSelectDemo from "./fields/multiselect/page";
+import InputFieldDemo from "./fields/inputfield/page";
 
 export default function Home() {
   return (
@@ -22,49 +22,9 @@ export default function Home() {
             Tailwind
           </Link>
         </h1>
-        
-        <section className="w-2/3 flex flex-col border rounded-xl p-5 shadow shadow-xl mb-8">
-          <h2 className="text-2xl font-semibold mb-4">MultiSelectInput Component</h2>
-          <p className="mb-4">
-            The MultiSelectInput component is a customizable dropdown that allows users to select multiple options from a list.
-            It supports creating new options on the fly and uses react-select for a smooth user experience.
-          </p>
-          <div className="border-t pt-5 mb-4">
-            <MultiSelect />
-          </div>
-          <p className="text-sm text-gray-600">
-            Try selecting multiple options or creating a new option!
-          </p>
-        </section>
-
-        <section className="w-2/3 flex flex-col border rounded-xl p-5 shadow shadow-xl mb-8">
-          <h2 className="text-2xl font-semibold mb-4">InputField Component</h2>
-          <p className="mb-4">
-            The InputField component is a versatile input element with support for various states and styling options.
-            It includes label, placeholder, and different visual states.
-          </p>
-          <div className="border-t pt-5 mb-4">
-            <InputFieldDemo />
-          </div>
-          <p className="text-sm text-gray-600">
-            Try typing in the input fields to see it in action!
-          </p>
-        </section>
-
-        <section className="w-2/3 flex flex-col border rounded-xl p-5 shadow shadow-xl mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Toggle Component</h2>
-          <p className="mb-4">
-            The Toggle component is a customizable switch that allows users to toggle between two states.
-            It supports different colors and can be easily integrated into forms or settings panels.
-          </p>
-          <div className="border-t pt-5 mb-4">
-            <ToggleDemo />
-          </div>
-          <p className="text-sm text-gray-600">
-            Try toggling the switches to see the different colors and states!
-          </p>
-        </section>
-
+        <MultiSelectDemo/>
+        <InputFieldDemo/>
+        <ToggleDemo/>
         <Link 
           href="https://github.com/christineRPM/nextjs-typscript-tailwind-ui-components"
           className="mt-8 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
