@@ -1,7 +1,21 @@
 {
   "name": "nextjs-typscript-tailwind-ui-components",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Christine Perry",
+    "url": "https://nomikai.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christineRPM/nextjs-typscript-tailwind-ui-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/christineRPM/nextjs-typscript-tailwind-ui-components/issues"
+  },
+  "keywords": ["nextjs", "typescript", "tailwind", "ui-components", "react"],
+  "license": "MIT",
+  "description": "A collection of Next.js, TypeScript, and Tailwind CSS UI components.",
+  "authorBlog": "https://medium.com/@christineRPM",
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
