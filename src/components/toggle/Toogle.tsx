@@ -35,7 +35,6 @@ function Toggle<T extends ColorType>({
 
   const defaultColor = Object.keys(colorClasses)[0] as T;
   const bgColorClass = color ? colorClasses[color] : colorClasses[defaultColor];
-  const lightColorClass = `${bgColorClass.replace('bg-', 'bg-')}/25`;
 
   return (
     <button
