@@ -4,7 +4,7 @@ import makeAnimated from 'react-select/animated';
 import { ActionMeta, MultiValue, StylesConfig } from 'react-select';
 import { fruitOptions, colorOptions, animalOptions } from '@/data/selectOptions';
 
-type OptionType = {
+export type OptionType = {
     value: string;
     label: string;
 };
@@ -80,11 +80,11 @@ const customStyles: StylesConfig<OptionType, true> = {
 };
 
 type MultiSelectInputProps = {
-    title?: string;
-    optionType: 'fruit' | 'color' | 'animal';
-    selectedValues: OptionType[];
-    onChange: (selected: MultiValue<OptionType>) => void;
-    extra?: string;
+  title?: string;
+  optionType: 'fruit' | 'color' | 'animal';
+  selectedValues: OptionType[];
+  onChange: (selected: MultiValue<OptionType>) => void;
+  extra?: string;
 };
 
 const MultiSelectInput: React.FC<MultiSelectInputProps> = ({ title, optionType, selectedValues, onChange, extra }) => {
