@@ -3,6 +3,7 @@ import Link from "next/link";
 import ToggleDemo from "./toggle/page";
 import MultiSelectDemo from "./fields/multiselect/page";
 import InputFieldDemo from "./fields/inputfield/page";
+import ErrorMessageDemo from "./error/page";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <MultiSelectDemo/>
         <InputFieldDemo/>
         <ToggleDemo/>
+        <ErrorMessageDemo/>
         <Link 
           href="https://github.com/christineRPM/nextjs-typscript-tailwind-ui-components"
           className="mt-8 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
