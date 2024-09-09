@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[auto_1fr_auto] min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] relative"> 
       <main className="flex flex-col gap-2 items-center">
-        <h1 className="text-3xl font-bold">Components</h1>
+        <h1 className="text-3xl font-bold">UI Components</h1>
         <h1 className="text-xl font-bold mb-4 flex items-center space-x-3">
           <Link href="https://nextjs.org/docs" className="text-blue-500 hover:underline">
             NextJS
