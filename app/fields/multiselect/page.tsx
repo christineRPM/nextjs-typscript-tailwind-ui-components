@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { NextPage } from "next";
-import MultiSelectInput from "@/components/fields/MultiSelectInput";
+import dynamic from 'next/dynamic';
 import { MultiValue } from "react-select";
 
 type OptionType = {
@@ -10,12 +10,19 @@ type OptionType = {
     label: string;
 };
 
+// Dynamically import the MultiSelectInput component
+const DynamicMultiSelectInput = dynamic(
+  () => import("@/components/fields/MultiSelectInput"),
+  { ssr: false } // This ensures the component only renders on the client side
+);
+
 const MultiSelectDemo: NextPage = () => {
   const [selectedFruits, setSelectedFruits] = useState<OptionType[]>([]);
 
   const handleFruitChange = (newValue: MultiValue<OptionType>) => {
       setSelectedFruits(newValue as OptionType[]);
   };
+
   return (
     <section className="w-2/3 flex flex-col border rounded-xl p-5 shadow shadow-xl mb-8">
       <h2 className="text-2xl font-semibold mb-4">MultiSelectInput Component</h2>
@@ -24,12 +31,12 @@ const MultiSelectDemo: NextPage = () => {
         It supports creating new options on the fly and uses react-select for a smooth user experience.
       </p>
       <div className="border-t pt-5 mb-4">
-      <MultiSelectInput
-            title="Multi Select Example"
-            optionType="fruit"
-            selectedValues={selectedFruits}
-            onChange={handleFruitChange}
-            extra="mb-4"
+        <DynamicMultiSelectInput
+          title="Multi Select Example"
+          optionType="fruit"
+          selectedValues={selectedFruits}
+          onChange={handleFruitChange}
+          extra="mb-4"
         />
       </div>
       <p className="text-sm text-gray-600">
