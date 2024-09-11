@@ -1,4 +1,4 @@
-import React, { Fragment, FC } from 'react';
+import React, { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { EllipsisVerticalIcon, ChevronDownIcon, PencilSquareIcon } from '@heroicons/react/20/solid';
 
